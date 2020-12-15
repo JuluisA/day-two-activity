@@ -21,8 +21,11 @@ const routes: Routes = [
     },
    ]
   },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: '', component: OneColumnComponent, children: [
+      { path: 'about', component: AboutComponent },
+      { path: 'contact', component: ContactComponent },
+    ]
+  },
   { path: 'not-found', component: OneColumnComponent, children: [
       { path: '', component: NotFoundComponent },
     ]
